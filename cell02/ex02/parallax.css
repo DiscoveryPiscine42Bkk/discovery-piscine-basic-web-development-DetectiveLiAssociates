@@ -1,0 +1,23 @@
+html, body{
+    margin:0;padding:0;
+    height:100%;
+    scroll-behavior: smooth;
+}
+section{
+    position:relative; display:flex; min-height:55vh; width:100%;
+}
+.view1{
+    background-image:url('theme1.jpg');height:110vh;
+    background-repeat:no-repeat;background-position: center;
+    background-size:cover;background-attachment: fixed;
+}
+.view2{
+    background-image:url('theme2.jpg');height:110vh;
+    background-repeat:no-repeat;background-position: center;
+    background-size:cover;background-attachment: fixed;
+}
+.main{
+    background-color:#f1f1f1; text-align:center;
+    display:flex; height:5vh; font-size:3em;
+    justify-content: center; justify-items: center;
+}
