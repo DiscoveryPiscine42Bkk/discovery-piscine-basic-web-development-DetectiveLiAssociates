@@ -1,0 +1,18 @@
+html,body{
+    margin:0;padding:0;padding-top:10%;
+    display:flex; justify-content: center; justify-items: center;
+    body {
+        transition:background-color 0.5s;
+      }
+      #clicker {
+        padding:12px 24px;
+        font-size:18px;
+        background-color:#111;
+        color:white;
+        border:none;
+        border-radius:15px;
+        cursor:pointer;
+      }
+      #clicker:hover {
+        background-color: #555;
+      }
