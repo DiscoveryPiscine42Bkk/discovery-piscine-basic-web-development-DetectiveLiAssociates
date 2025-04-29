@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Random Background Color</title>
+  <link rel="stylesheet" href="background.css">
+</head>
+<body>
+
+<button id="clicker">Change the Color</button>
+
+<script>
+  const btn=document.getElementById('clicker');
+  btn.addEventListener('click',function(){
+    const bgCol='#'+Math.floor(Math.random()*16777215).toString(16).padStart(6,'0');
+    document.body.style.backgroundColor=bgCol;
+  });
+</script>
+
+</body>
+</html>
