@@ -1,0 +1,33 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calc</title>
+  <link rel="stylesheet" href="calc.css">
+  <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Pacifico&family=Damion&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Satisfy&display=swap" rel="stylesheet" />
+</head>
+<body>
+  
+  <div class="title">Calculator&nbsp;</div>  
+  <div class="calcx">
+    <form>
+    <label for="var1" class="labelling">Enter: </label>
+    <input type="number" id="v1" placeholder="Var 1" maxlength="10" style="font-size:22px;width:200px; height:45px; border-radius:10px;">
+    <label for="var1" class="labelling">with: </label>
+    <select id="operand" style="height:55px;">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+      <option value="%">%</option>
+    </select>
+    <label for="var2" class="labelling">Enter: </label>
+    <input type="number" id="v2" placeholder="Var 2" maxlength:="10" style="font-size:22px;width:200px; height:45px; border-radius:10px;"> &nbsp; 
+    <button onclick="calc()" class="btn" style="width:55px;height:55px;border-radius:50px;color:#556655;">Try Me!</button> &nbsp; 
+    <input type="reset" value="Reset" class="btn" style="font-size:14px;color:#ff0000;width:55px;height:55px;border-radius:50px;">
+  </form> 
+  </div>
+  
+  <script src="calc.js"></script>
+  </body>
+</html>
