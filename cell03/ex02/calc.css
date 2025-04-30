@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Damion&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Satisfy&display=swap');
+
+html,body {
+      font-family: roboto condensed;
+      display: flex; justify-content: center; align-items: center;
+      height: 100vh; background-color: #f9f9f9;
+    }
+    .title { font-family: pacifico; font-size: 5em; color: #111; }
+    .calcx {
+      background: #556655;
+      padding: 15px; border-radius: 10px;
+      box-shadow: 0 0 10px 0 rgba(85,102,85,0.9);
+    }
+    input, select {
+      margin: 5px; padding: 10px; font-family: roboto condensed; border-radius:50px;
+      font-family:roboto condensed;font-size:22px;color:#556655;
+    }
+    .labelling{
+      font-family:roboto condensed;color:#ffdd00;
+    }
+    .btn {
+      font-family:roboto condensed;border-radius:18px; height:35px;
+    }
