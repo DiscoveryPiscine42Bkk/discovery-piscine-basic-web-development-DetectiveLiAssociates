@@ -1,0 +1,25 @@
+.dropMenu{
+    position:relative; display: inline-block;
+}
+
+.displaySwitch{
+    position: absolute; z-index:1; display: none;
+}
+
+a, a:active{
+    text-decoration: none;
+}
+
+a:hover{
+    background-color:#ffdd00;
+}
+
+.dropMenu:hover .displaySwitch{
+    display: block;
+    width:280px;border-radius:15px;
+    background-color:#ffdd00; font-family:arial; color: #111;
+}
+
+.selection{
+    cursor: pointer; width:100px; height:100px;
+}
