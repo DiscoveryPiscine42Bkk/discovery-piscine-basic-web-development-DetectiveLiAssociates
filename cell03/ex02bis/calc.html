@@ -1,0 +1,104 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calc</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="calc.css">
+  <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Pacifico&family=Damion&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Satisfy&display=swap" rel="stylesheet" />
+  <style>
+    html,body {
+      font-family: roboto condensed;
+      display: flex; justify-content: center; align-items: center;
+      height: 100vh; background-color: #f9f9f9;
+    }
+    .title { font-family: pacifico; font-size: 5em; color: #111; }
+    .calcx {
+      background: #556655;
+      padding: 15px; border-radius: 10px;
+      box-shadow: 0 0 10px 0 rgba(85,102,85,0.9);
+    }
+    input, select {
+      margin: 5px; padding: 10px; font-family: roboto condensed; border-radius:50px;
+      font-family:roboto condensed;font-size:22px;color:#556655;
+    }
+    .labelling{
+      font-family:roboto condensed;color:#ffdd00;
+    }
+    .btn {
+      font-family:roboto condensed;border-radius:18px; height:35px;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="title">Calculator&nbsp;</div>  
+  <div class="calcx">
+    <form>
+    <label for="var1" class="labelling">Enter: </label>
+    <input type="number" id="v1" placeholder="Var 1" maxlength="10" style="font-size:22px;width:200px; height:45px; border-radius:10px;">
+    <label for="var1" class="labelling">with: </label>
+    <select id="operand" style="height:55px;">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+      <option value="%">%</option>
+    </select>
+    <label for="var2" class="labelling">Enter: </label>
+    <input type="number" id="v2" placeholder="Var 2" maxlength:="10" style="font-size:22px;width:200px; height:45px; border-radius:10px;"> &nbsp; 
+    <button onclick="calc()" class="btn" style="width:55px;height:55px;border-radius:50px;color:#556655;">Try Me!</button> &nbsp; 
+    <input type="reset" value="Reset" class="btn" style="font-size:14px;color:#ff0000;width:55px;height:55px;border-radius:50px;">
+  </form> 
+  </div>
+  
+  <script>
+    setInterval(() => {
+      alert('Please, use me...');
+    }, 30000);
+
+    // Global calc function
+    function calc() {
+      const v1 = parseFloat($('#v1').val());
+      const v2 = parseFloat($('#v2').val());
+      const process = $('#operand').val();
+      let doCalc;
+
+      if (v1 < 0 || v2 < 0) {
+        doCalc = "Error! (Negatives Not Allowed per Instruction)";
+        console.log(doCalc); alert(doCalc);
+        return;
+      }
+
+      if ((process === '/' || process === '%') && v2 === 0) {
+        doCalc = "It's Over 9000!";
+        console.log(doCalc); alert(doCalc);
+        return;
+      }
+
+      switch (process) {
+        case '*':
+          doCalc = v1 * v2;
+          break;
+        case '/':
+          doCalc = v1 / v2;
+          break;
+        case '%':
+          doCalc = v1 % v2;
+          break;
+        case '+':
+          doCalc = v1 + v2;
+          break;
+        case '-':
+          doCalc = v1 - v2;
+          break;
+        default:
+          doCalc = '';
+      }
+
+      console.log("Result: ", doCalc);
+      alert("Result: " + doCalc);
+    }
+  </script>
+  </body>
+</html>
